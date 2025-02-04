@@ -3,6 +3,9 @@ source $VIMRUNTIME/vimrc_example.vim
 
 if has('win32') || has('win64')
   set runtimepath=$HOME/.vim,$VIM/vimfiles,$VIMRUNTIME,$VIM/vimfiles/after,$HOME/.vim/after
+  set undodir=~/vimtmp/.undo/
+  set backupdir=~/vimtmp/.backup/
+  set directory=~/vimtmp/.swp/
 endif
 
 " Use the internal diff if available.
@@ -43,10 +46,6 @@ function MyDiff()
   endif
 endfunction
 
-let g:pytest_test_dir = ""
-let g:pytest_test_file = "test_*.py"
-let g:pytest_executable = "pytest"
-let g:python_highlight_all = 1
 
 call plug#begin()
 " List your plugins here
@@ -71,13 +70,19 @@ set termguicolors
 colorscheme enfocado
 let g:enfocado_style = 'nature' " Available: `nature` or `neon`.
 set background=dark
+
 let g:pymode_rope_goto_definition_bind = '<C-c>g'
 let g:pymode_folding = 0
+let g:pytest_test_dir = ""
+let g:pytest_test_file = "test_*.py"
+let g:pytest_executable = "pytest"
+let g:python_highlight_all = 1
+
 let g:clever_f_fix_key_direction = 1
 
 augroup py
   autocmd!
-  autocmd BufNewFile  *.py	0r ~\vimfiles\skeleton\template.py
+  autocmd BufNewFile  *.py	0r ~\.vim\skeleton\template.py
 augroup end
 
 nnoremap <silent> <leader>d :bprevious<bar>split<bar>bnext<bar>bdelete<CR>
@@ -93,9 +98,6 @@ set number
 set expandtab
 set tabstop=2
 set shiftwidth=2
-set undodir=~/vimtmp/.undo/
-set backupdir=~/vimtmp/.backup/
-set directory=~/vimtmp/.swp/
 if has("gui_running")
   set guifont=Cascadia\ Mono:h12
 endif
