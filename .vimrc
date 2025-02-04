@@ -82,7 +82,7 @@ let g:clever_f_fix_key_direction = 1
 
 augroup py
   autocmd!
-  autocmd BufNewFile  *.py	0r ~\.vim\skeleton\template.py
+  autocmd BufNewFile  *.py	0r ~/.vim/skeleton/template.py
 augroup end
 
 nnoremap <silent> <leader>d :bprevious<bar>split<bar>bnext<bar>bdelete<CR>
