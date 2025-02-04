@@ -7,7 +7,9 @@ PROMPT="%F{2}%n@%m%f (%F{3}$OS_NAME%f) %F{4}%~%f %# "
 
 export KEYTIMEOUT=1
 
-
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi
 # The following lines were added by compinstall
 
 zstyle ':completion:*' completer _complete _ignored
