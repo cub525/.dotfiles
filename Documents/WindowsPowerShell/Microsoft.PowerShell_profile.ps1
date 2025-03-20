@@ -10,3 +10,6 @@ function dotfile {
 function edit-profile {
     vim $PROFILE
 }
+
+# Alias python to python3
+Set-Alias python3 python
