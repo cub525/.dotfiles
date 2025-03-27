@@ -58,6 +58,8 @@ tnoremap <silent> [w :tabprevious<CR>
 nnoremap <silent> ]w :tabnext<CR>
 vnoremap <silent> ]w :tabnext<CR>
 tnoremap <silent> ]w :tabnext<CR>
+nmap <silent> g] g
+vmap <silent> g] g
 
 function! OpenFileTypeDirectoryOrVimFile()
   " Get the current filetype
@@ -75,7 +77,7 @@ function! OpenFileTypeDirectoryOrVimFile()
     execute 'Vexplore ' . l:ft_dir
   else
     " Open the filetype.vim file instead
-    execute 'edit ' . expand('~/.vim/ftplugin/' . l:filetype . '.vim')
+    execute 'split ' . expand('~/.vim/ftplugin/' . l:filetype . '.vim')
   endif
 endfunction
 
