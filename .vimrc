@@ -52,12 +52,6 @@ nnoremap <silent> <leader>d :bprevious<bar>split<bar>bnext<bar>bdelete<CR>
 nnoremap <silent> <leader>ev :vsplit $MYVIMRC<CR>
 nnoremap <silent> <leader>sv :w<bar>so $MYVIMRC<CR>
 " TODO make these functions that can work with directories as well
-nnoremap <silent> [w :tabprevious<CR>
-vnoremap <silent> [w :tabprevious<CR>
-tnoremap <silent> [w :tabprevious<CR>
-nnoremap <silent> ]w :tabnext<CR>
-vnoremap <silent> ]w :tabnext<CR>
-tnoremap <silent> ]w :tabnext<CR>
 nmap <silent> g] g
 vmap <silent> g] g
 
