@@ -3,10 +3,11 @@ source $VIMRUNTIME/vimrc_example.vim
 
 if has('win32') || has('win64')
   set runtimepath=$HOME/.vim,$VIM/vimfiles,$VIMRUNTIME,$VIM/vimfiles/after,$HOME/.vim/after
-  set undodir=~/vimtmp/.undo/
-  set backupdir=~/vimtmp/.backup/
-  set directory=~/vimtmp/.swp/
 endif
+
+set undodir=~/vimtmp/.undo/
+set backupdir=~/vimtmp/.backup/
+set directory=~/vimtmp/.swp/
 
 call plug#begin()
   " List your plugins here
@@ -21,13 +22,13 @@ call plug#begin()
   Plug 'wuelnerdotexe/vim-enfocado'
   Plug 'github/copilot.vim', { 'on': 'Copilot' }
   Plug 'leafOfTree/vim-svelte-plugin', { 'for': 'svelte' }
-  Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
+  " Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
   Plug 'vim-python/python-syntax', { 'for': 'python' }
   Plug 'JuliaEditorSupport/julia-vim', { 'for': 'julia' }
   " Plug 'mhinz/vim-startify'
 call plug#end()
 
-set termguicolors
+" set termguicolors
 colorscheme enfocado
 let g:enfocado_style = 'nature' " Available: `nature` or `neon`.
 set background=dark
@@ -78,7 +79,9 @@ endfunction
 nnoremap <silent> <leader>ef :call OpenFileTypeDirectoryOrVimFile()<CR>
 nnoremap <silent> <leader>sf :edit %<CR>
 
+set backupcopy=yes
 set foldmethod=manual
+set clipboard=unnamed
 set nowrap
 set number
 set expandtab
