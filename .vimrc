@@ -31,7 +31,7 @@ call plug#end()
 " set termguicolors
 colorscheme enfocado
 let g:enfocado_style = 'nature' " Available: `nature` or `neon`.
-set background=dark
+" set background=dark
 
 let g:pymode_python = 'python3'
 let g:pymode_virtualenv = 0
