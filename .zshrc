@@ -1,5 +1,5 @@
 get_os_name() {
-    echo "$(uname -s | cut -c1-5)"
+    echo "$(uname -s | cut -c1-6)"
 }
 
 OS_NAME=$(get_os_name)
@@ -27,12 +27,3 @@ SAVEHIST=1000
 setopt appendhistory
 # bindkey -v
 # End of lines configured by zsh-newuser-install
-eval "$(/opt/homebrew/bin/brew shellenv)"
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-# Created by `pipx` on 2025-04-30 16:38:21
-export PATH="$PATH:/Users/treelinegroup/.local/bin"
-eval "$(register-python-argcomplete pipx)"
