@@ -20,12 +20,14 @@ call plug#begin()
   Plug 'tpope/vim-surround'
   Plug 'tpope/vim-unimpaired'
   Plug 'tpope/vim-sensible'
+  Plug 'PeterRincker/vim-argumentative'
   Plug 'wuelnerdotexe/vim-enfocado'
   Plug 'github/copilot.vim', { 'on': 'Copilot' }
   Plug 'leafOfTree/vim-svelte-plugin', { 'for': 'svelte' }
   " Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
   Plug 'vim-python/python-syntax', { 'for': 'python' }
-  Plug 'tmhedberg/SimpylFold', { 'for': 'python' }
+  " Plug 'tmhedberg/SimpylFold', { 'for': 'python' }
+  Plug 'suy/vim-context-commentstring'
   Plug 'JuliaEditorSupport/julia-vim', { 'for': 'julia' }
   " Plug 'mhinz/vim-startify'
 call plug#end()
@@ -119,6 +121,7 @@ set number
 set expandtab
 set tabstop=2
 set shiftwidth=2
+set textwidth=0
 " if windows and has gui running
 if has("gui_running") && has("win32")
   set guifont=Cascadia\ Mono:h12
