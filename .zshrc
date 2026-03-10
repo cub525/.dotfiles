@@ -27,3 +27,12 @@ SAVEHIST=1000
 setopt appendhistory
 # bindkey -v
 # End of lines configured by zsh-newuser-install
+
+# >>> juliaup initialize >>>
+
+# !! Contents within this block are managed by juliaup !!
+
+path=('/home/emmett/.juliaup/bin' $path)
+export PATH
+
+# <<< juliaup initialize <<<
