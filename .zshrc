@@ -1,5 +1,5 @@
 get_os_name() {
-    echo "$(uname -s | cut -c1-5)"
+    echo "$(uname -s | cut -c1-6)"
 }
 
 OS_NAME=$(get_os_name)
@@ -16,12 +16,14 @@ zstyle ':completion:*' completer _complete _ignored
 zstyle ':completion:*' max-errors 2 numeric
 zstyle :compinstall filename '/home/emmett/.zshrc'
 
+fpath+=/.zfunc
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 # Lines configured by zsh-newuser-install
-HISTFILE=~/.histfile
+HISTFILE=~/.zsh_histfile
 HISTSIZE=1000
 SAVEHIST=1000
-bindkey -v
+setopt appendhistory
+# bindkey -v
 # End of lines configured by zsh-newuser-install
